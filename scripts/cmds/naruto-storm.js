@@ -306,7 +306,7 @@ const characters = [
     ultimate: "Transformation Karma 🔥"
   },
   {
-    name: "Isshiki Otsutsuki",
+    name: "ᎬᎷᏢᎬᏒᎬᏌᏒ ᏒᎾᎷᎬᎾ",
     power: 90,
     basic: "Sukunahikona 🔍",
     ultimate: "Daikokuten ⏳"
