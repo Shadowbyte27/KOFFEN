@@ -46,7 +46,7 @@ module.exports = {
  form.doc_id = "4108254489275063";
  }
  else {
- return api.sendMessage("⚠️ 𝒰𝓈𝒶𝑔𝑒: add | del <𝓃𝓊𝓂𝒷𝑒𝓇 / all>", event.threadID, event.messageID);
+ return api.sendMessage(" 🎧❌Usage: add | del <Number / all>", event.threadID, event.messageID);
  }
 
  let targetIDs = args.slice(1);
@@ -63,7 +63,7 @@ module.exports = {
  for (const stt of targetIDs) {
  const u = listRequest[parseInt(stt) - 1];
  if (!u) {
- failed.push(`❌ 𝒞𝒶𝓃'𝓉 𝒻𝒾𝓃𝒹 𝓃𝓊𝓂𝒷𝑒𝓇 ${stt}`);
+ failed.push(`🎧❌ Con't find number ${stt}`);
  continue;
  }
  form.variables.input.friend_requester_id = u.node.id;
@@ -91,11 +91,11 @@ module.exports = {
 
  if (success.length > 0) {
  api.sendMessage(
- `✅ 𝓢𝓾𝓬𝓬𝓮𝓼𝓼! 𝒴𝑜𝓊 𝒽𝒶𝓋𝑒 ${
- args[0] === 'add' ? '𝒶𝒸𝒸𝑒𝓅𝓉𝑒𝒹' : '𝒹𝑒𝓁𝑒𝓉𝑒𝒹'
- } ${success.length} 𝒻𝓇𝒾𝑒𝓃𝒹 𝓇𝑒𝓆𝓊𝑒𝓈𝓉(𝓈):\n\n🌸 ${success.join("\n🌸 ")}${
+ `🎧 Tranquille ${
+ args[0] === 'add' ? 'Accept' : 'Delete'
+ } ${success.length} Fro'ds(s):\n\n🎧🖤 ${success.join("\n🪶🧘🏻‍♂️ ")}${
  failed.length > 0
- ? `\n\n❌ 𝒯𝒽𝑒 𝒻𝑜𝓁𝓁𝑜𝓌𝒾𝓃𝑔 ${failed.length} 𝓊𝓈𝑒𝓇(𝓈) 𝓌𝑒𝓇𝑒 𝓃𝑜𝓉 𝓅𝓇𝑜𝒸𝑒𝓈𝓈𝑒𝒹:\n🔻 ${failed.join("\n🔻 ")}`
+ ? `\n\n❌ The following  ${failed.length} user (𝓈) 𝓌𝑒𝓇𝑒 𝓃𝑜𝓉 𝓅𝓇𝑜𝒸𝑒𝓈𝓈𝑒𝒹:\n🔻 ${failed.join("\n🔻 ")}`
  : ""
  }`,
  event.threadID,
@@ -104,7 +104,7 @@ module.exports = {
  } else {
  api.unsendMessage(messageID);
  return api.sendMessage(
- "⚠️ 𝒾𝓃𝓋𝒶𝓁𝒾𝒹 𝓇𝑒𝓈𝓅𝑜𝓃𝓈𝑒! 𝒫𝓁𝑒𝒶𝓈𝑒 𝓊𝓈𝑒: add | del <number | all>",
+ " 🎧🖤 𝒾𝓃𝓋𝒶𝓁𝒾𝒹 𝓇𝑒𝓈𝓅𝑜𝓃𝓈𝑒! 𝒫𝓁𝑒𝒶𝓈𝑒 𝓊𝓈𝑒: add | del <number |
  event.threadID
  );
  }
